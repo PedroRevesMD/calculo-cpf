@@ -13,12 +13,7 @@ export function validCPFLength(text: string): boolean {
 }
 
 export function checkCpfEqualDigits(text: string): boolean {
-  const regex = /^(\d)\1{10}/;
-  if (regex.test(text)) {
-    return true;
-  } 
-
-  return false;
+  return new Set(text).size === 1; 
 }
 
 export function validateCpf(text: string): boolean {

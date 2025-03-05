@@ -4,13 +4,19 @@ import { CpfTamanhoInvalido } from "./error/tamanhoInvalidoError";
 import { checkCpfEqualDigits, trimSpecialCharacters, validateCpf, validCPFLength } from "./utils/utils";
 
 (() => {
-  const userCpf = trimSpecialCharacters(Bun.argv[2]);
+  let userCpf = Bun.argv[2];
+
+  if(userCpf == null) {
+    throw new Error("Você precisa inserir um CPF como parâmetro!")
+  }
+
+  userCpf = trimSpecialCharacters(userCpf);
   
   if(!validCPFLength(userCpf)) {
     throw new CpfTamanhoInvalido();
   }
 
-  if(!checkCpfEqualDigits(userCpf)) {
+  if(checkCpfEqualDigits(userCpf)) {
     throw new CpfRepeticaoNumerica();
   }
 
