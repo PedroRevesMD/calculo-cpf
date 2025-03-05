@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test"
-import { checkCpfEqualDigits, trimSpecialCharacters, validateCpf, validCPFLength } from "..";
+import { checkCpfEqualDigits, trimSpecialCharacters, validateCpf, validCPFLength } from "../utils/utils.ts";
 
 describe("CPF tests", () => {
   it("should trim special characters", () => {
@@ -8,7 +8,7 @@ describe("CPF tests", () => {
     expect(trimSpecialCharacters(input)).toBe(output);
   })
   it("should not be able to enter a cpf with more than 11 characters", () => {
-    const input = "543.678.123-25";
+    const input = "5436781232545";
     expect(validCPFLength(input)).toBe(false)
   })
   it("should not be able to enter a cpf with all the digits being equal", () => {
