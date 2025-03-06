@@ -6,7 +6,7 @@ Criado com Bun e Typescript, O projeto foi um estudo da ferramenta Bun e suas fu
 
 ## Instalação
 
-Você pode instalar esse projeto copiando e colando os comandos abaixo. Lembrando que, para ser possível rodar esse projeto, é necessário que vocẽ tenha o Bun instalado em sua máquina
+Você pode instalar esse projeto copiando e colando os comandos abaixo. Lembrando que, para ser possível rodar esse projeto, é necessário que você tenha o Bun instalado em sua máquina
 
 **Required: Bun 1.2.2+**
 
